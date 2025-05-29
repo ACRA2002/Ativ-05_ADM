@@ -7,14 +7,17 @@
 </head>
 <body>
     <script>
-        const criarSaudacao = {
-            saudacao: "Bom dia",
 
-            nome: function () {
-                return `${this.saudacao}, João!`;
-             },
-        }
-        console.log(criarSaudacao.nome());
-    </script>
+        const criarSaudacao = {
+        saudacao: "Bom dia",
+        criar: {
+        nome: "João",
+        perso: function() {
+            return `${criarSaudacao.saudacao}, ${this.nome}!`;
+             }
+         }
+};
+console.log(criarSaudacao.criar.perso());
+     </script>
 </body>
 </html>
